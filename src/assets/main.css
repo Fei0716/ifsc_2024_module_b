@@ -5,20 +5,71 @@
   src: url("./fonts/Roboto/Roboto-Regular.ttf");
 }
 @font-face{
+  font-family: "Roboto-Light";
+  src: url("./fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face{
   font-family: "Roboto-Bold";
   src: url("./fonts/Roboto/Roboto-Bold.ttf");
 }
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body{
-  background-color: #ff5a5a;
+  overflow: hidden;
   font-family: "Roboto-Regular";
+  transition: background-color 0.5s;
 }
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   font-weight: normal;
 }
 nav{
   display: flex;
+}
+.text-white{
+  color: white;
+}
+.btn-play{
+  position: relative;
+  background-color: #c03333;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  width: 300px;
+  height: 80px;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid transparent;
+}
+.btn-play::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20%, -50%);
+  width: 40px;
+  height: 0px;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 40px solid white;
+}
+.btn-play:hover{
+  background-color: #c03333;
+  border-color: white;
+}
+h1{
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+strong{
+  font-size: 3rem;
+  text-transform: uppercase;
+
 }
 
